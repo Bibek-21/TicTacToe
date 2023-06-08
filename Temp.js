@@ -38,9 +38,12 @@ let Checkwin = () => {
         // console.log("Yeha samma thik xa"); //ok
         
         if ((boxtexts[e[0]].innerText == boxtexts[e[1]].innerText) && (boxtexts[e[1]].innerText == boxtexts[e[2]].innerText) && (boxtexts[e[0]].innerText != "")) {
-            document.getElementsByClassName('info').innerText = 'Winner is ' + boxtexts[e[0]].innerText;
-            // console.log(boxtexts[e[0]].innerText); //checking
-            reset();
+            // console.log(document.getElementsByClassName('info')[0].innerText);
+            document.getElementsByClassName('info')[0].innerText = 'Winner is ' + boxtexts[e[0]].innerText;
+            console.log(document.getElementsByClassName('info')[0].innerText);
+
+            // console.log(`Winner is ${boxtexts[e[0]].innerText}`); //checking
+            // reset();
 
             //    gamefinish();
 
