@@ -43,7 +43,7 @@ let Checkwin = () => {
     ];
     win.forEach(e => {
         // console.log("Yeha samma thik xa"); //ok
-
+        
         if ((boxtexts[e[0]].innerText == boxtexts[e[1]].innerText) && (boxtexts[e[1]].innerText == boxtexts[e[2]].innerText) && (boxtexts[e[0]].innerText != "")) {
             document.querySelector('.info')[0].innerText = 'Winner is ' + boxtexts[e[0]].innerText;
             // console.log(boxtexts[e[0]].innerText); //checking
@@ -52,7 +52,7 @@ let Checkwin = () => {
             //    gamefinish();
 
         }
-    })
+     })
 }
 
 // console.log(665);
