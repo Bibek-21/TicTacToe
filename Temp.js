@@ -1,11 +1,12 @@
 
 
 let turn = "X";
-
+let printInfo = true;
 let Checkturn = () => {
     return turn == "X" ? "0" : "X"
     // return console.log("yeha xu la ma"); //ok
 };
+let boxes = document.getElementsByClassName("box");
 
 let reset = () => {
     Array.from(boxes).forEach(element => {
@@ -40,7 +41,11 @@ let Checkwin = () => {
         if ((boxtexts[e[0]].innerText == boxtexts[e[1]].innerText) && (boxtexts[e[1]].innerText == boxtexts[e[2]].innerText) && (boxtexts[e[0]].innerText != "")) {
             // console.log(document.getElementsByClassName('info')[0].innerText);
             document.getElementsByClassName('info')[0].innerText = 'Winner is ' + boxtexts[e[0]].innerText;
+            console.log(document.getElementsByClassName('info'))
+            console.log(boxtexts)
+            console.log('Winner is ' + boxtexts[e[0]].innerText)
             console.log(document.getElementsByClassName('info')[0].innerText);
+            printInfo = false
 
             // console.log(`Winner is ${boxtexts[e[0]].innerText}`); //checking
             // reset();
@@ -51,8 +56,7 @@ let Checkwin = () => {
      })
 }
 
-// console.log(665);
-let boxes = document.getElementsByClassName("box");
+
 // console.log(boxes);
 
 
@@ -63,22 +67,17 @@ Array.from(boxes).forEach(element => {
     // console.log("Yeha samma thik xa"); //ok
 
     element.addEventListener('click', () => {
-        // console.log("Yeha samma thik xa"); //ok
-
         if (boxtext.innerText === '') {
             // console.log("Yeha samma thik xa");// ok
-
             boxtext.innerText = turn;
             // console.log(turn);
             turn = Checkturn();
-            Checkwin();
-
-
+            Checkwin(); // if won info is change 
         }
         // console.log( document.getElementsByClassName("info"));
+        if(printInfo){
         document.getElementsByClassName("info")[0].innerText = 'Turn for  ' + turn;
-
-
+        }
     });
 
 });
