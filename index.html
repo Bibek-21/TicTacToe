@@ -48,10 +48,10 @@
         <div class="testing"></div>
         <p></p>
         <button class="reset" id="mybtn">Reset</button>
-
+ 
     </div> 
 
-    <script src="Temp.js">  //if we use src = "scripts.js", reset button works but the winning message is not displayed
+    <script src="Scripts.js">  //if we use src = "scripts.js", reset button works but the winning message is not displayed
     //if we dont use src then only wining message is displayed but reset doesnot work
 
 let turn = "X";
@@ -90,8 +90,6 @@ Array.from(boxes).forEach(element => {
     let boxtext = element.querySelector(".boxtext");
     // console.log(boxtext);
     // console.log("Yeha samma thik xa"); //ok
-
-    element.addEventListener('click', () => {
         // console.log("Yeha samma thik xa"); //ok
 
         if (boxtext.innerText === '') {
